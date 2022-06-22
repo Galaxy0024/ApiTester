@@ -20,8 +20,7 @@ namespace ApiTester
             this.Sha1 = sha1;
             this.Sha256 = sha256;
         }
-
-
+        
         public override string GetData()
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -31,7 +30,6 @@ namespace ApiTester
 
             return stringBuilder.ToString();
         }
-
 
         public override void DoSomething()
         {
