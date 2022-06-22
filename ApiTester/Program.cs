@@ -17,10 +17,12 @@ namespace ApiTester
         /// <returns></returns>
         static async Task Main(string[] args)
         {
-           //Methods.MainAsync(args).GetAwaiter().GetResult();
-            CryptoCurrency result = await Methods.GetCryptoAsync(ConfigurationManager.AppSettings["cryptoApiRequest"]);
+            ApiClient apiClient = ApiClient.Instance;
+
+            CryptoCurrency result = await apiClient.GetCryptoAsync(ConfigurationManager.AppSettings["cryptoApiRequest"]);
+
             LoggerFactory loggerFactory = new LoggerFactory();
-            ILogger logger = loggerFactory.GetLoggerInstance(Methods.LoggerTypes.ConsoleLogger);
+            ILogger logger = loggerFactory.GetLoggerInstance(ApiClient.LoggerTypes.ConsoleLogger);
 
             logger.Log(result);
         }

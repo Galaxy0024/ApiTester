@@ -16,13 +16,13 @@ namespace ApiTester
         /// </summary>
         /// <param name="loggerType"></param>
         /// <returns></returns>
-        public ILogger GetLoggerInstance(Methods.LoggerTypes loggerType)
+        public ILogger GetLoggerInstance(ApiClient.LoggerTypes loggerType)
         {
             switch (loggerType)
             {
-                case Methods.LoggerTypes.CsvLogger:
+                case ApiClient.LoggerTypes.CsvLogger:
                     return new CsvLogger();
-                case Methods.LoggerTypes.ConsoleLogger:
+                case ApiClient.LoggerTypes.ConsoleLogger:
                     return new ConsoleLogger();                    
                 default:
                     throw new Exception("Invalid Logger type");
