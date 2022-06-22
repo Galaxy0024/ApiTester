@@ -4,6 +4,7 @@ Reference project for creating api requests, inheritance, logging using factory 
 ## API requests
 For managing API requests I used the Random data API, found at: https://random-data-api.com. 
 The app is sending a GET request to the API, and saves the json result in a prefedined CryptoCurrency object.
+The API methods are included in the ApiClient class, which is made using the Singleton design pattern.
 
 ## Class hierarchy
 While making the class hierarchy, I decided to use an abstract Currency class, which defines the future subclasses, setting uid as a base field.
