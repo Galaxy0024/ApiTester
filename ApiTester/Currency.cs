@@ -6,17 +6,11 @@ namespace ApiTester
 {
     abstract class Currency
     {
-        private string uid;
-
-        public string Uid
-        {
-            get { return uid; }
-            set { uid = value; }
-        }
+        public string Uid { get; set; }
 
         protected Currency(string uid)
         {
-            this.uid = uid;
+            this.Uid = uid;
         }
 
         public virtual void DoSomething()

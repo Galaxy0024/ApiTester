@@ -8,27 +8,17 @@ namespace ApiTester
 {
     class CryptoCurrency : Currency
     {
+        public string Md5 { get; set; }
+        
+        public string Sha1 { get; set; }
 
-        private string md5;
-
-        public string Md5
-        { get; set; }
-
-        private string sha1;
-
-        public string Sha1
-        { get; set; }
-
-        private string sha256;
-
-        public string Sha256
-        { get; set; }
+        public string Sha256 { get; set; }
 
         public CryptoCurrency(string uid, string md5, string sha1, string sha256) : base(uid)
         {
-            this.md5 = md5;
-            this.sha1 = sha1;
-            this.sha256 = sha256;
+            this.Md5 = md5;
+            this.Sha1 = sha1;
+            this.Sha256 = sha256;
         }
 
 
