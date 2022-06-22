@@ -12,26 +12,17 @@ namespace ApiTester
         private string md5;
 
         public string Md5
-        {
-            get { return md5; }
-            set { md5 = value; }
-        }
+        { get; set; }
 
         private string sha1;
 
         public string Sha1
-        {
-            get { return sha1; }
-            set { sha1 = value; }
-        }
+        { get; set; }
 
         private string sha256;
 
         public string Sha256
-        {
-            get { return sha256; }
-            set { sha256 = value; }
-        }
+        { get; set; }
 
         public CryptoCurrency(string uid, string md5, string sha1, string sha256) : base(uid)
         {
